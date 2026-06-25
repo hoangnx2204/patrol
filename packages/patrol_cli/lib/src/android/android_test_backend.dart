@@ -230,7 +230,7 @@ class AndroidTestBackend {
             }
           })
           .disposedBy(scope);
-
+			process.listenStdErr((l) {}).disposedBy(scope);
       await process.exitCode;
     });
   }
